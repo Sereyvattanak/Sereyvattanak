@@ -3,133 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Styled Template</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+    <title>Dark Theme Portfolio</title>
     <style>
-        :root {
-            --primary: #00B87B;
-            --secondary: #314355;
-            --light: #F2F2F2;
-            --dark: #2C3E50;
-        }
-
         body {
+            background-color: #121212;
+            color: #ffffff;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: var(--light);
         }
-
-        #spinner {
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity .5s ease-out, visibility 0s linear .5s;
-            z-index: 99999;
-        }
-
-        #spinner.show {
-            transition: opacity .5s ease-out, visibility 0s linear 0s;
-            visibility: visible;
-            opacity: 1;
-        }
-
-        .fw-semi-bold {
-            font-weight: 600;
-        }
-
-        .fw-medium {
-            font-weight: 500;
-        }
-
-        .btn-square {
-            width: 40px;
-            height: 40px;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .btn-primary {
-            background: var(--primary);
-            color: #FFFFFF;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .title {
-            position: relative;
-        }
-
-        .title::before {
-            position: absolute;
-            content: "";
-            width: 10px;
-            height: 10px;
-            bottom: -4px;
-            left: 0;
-            border: 2px solid var(--light);
-            border-radius: 10px;
-        }
-
-        .title::after {
-            position: absolute;
-            content: "";
-            width: 50px;
-            height: 2px;
-            bottom: 0;
-            left: 15px;
-            border-radius: 2px;
-            background: var(--light);
-        }
-
-        .service-item {
-            padding: 30px;
+        header {
+            background-color: #1e1e1e;
+            padding: 20px;
             text-align: center;
-            background: var(--secondary);
+            font-size: 24px;
         }
-
-        .service-item i {
-            width: 75px;
-            height: 75px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--light);
-            color: var(--primary);
-            transition: .5s;
+        nav {
+            background-color: #222;
+            padding: 10px;
+            text-align: center;
         }
-
-        .service-item:hover i {
-            background: var(--primary);
-            color: var(--light);
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 50px;
+            max-width: 800px;
+            margin: auto;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+        .button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #555;
         }
     </style>
 </head>
 <body>
-    <div id="spinner" class="show">Loading...</div>
-    
-    <header>
-        <h1 class="title">Welcome to the Styled Template</h1>
-    </header>
-
-    <section class="service-item">
-        <i class="fas fa-cog"></i>
-        <h2>Service Title</h2>
-        <p>Service description goes here.</p>
-    </section>
-
-    <button class="btn-primary">Click Me</button>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            setTimeout(() => {
-                document.getElementById("spinner").classList.remove("show");
-            }, 2000);
-        });
-    </script>
+    <header>Dark Theme Portfolio</header>
+    <nav>
+        <a href="#about">Home</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a passionate learner and developer with experience in web development, data science, and software engineering.</p>
+        </section>
+        
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li>Master's in Mathematics and Computing - IIT (ISM) Dhanbad</li>
+                <li>Bachelor's in Advanced Mathematics - Royal University of Phnom Penh</li>
+            </ul>
+        </section>
+        
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Programming: C++, Python, JavaScript</li>
+                <li>Web Development: HTML, CSS, React, Node.js</li>
+                <li>Data Science: Machine Learning, Deep Learning, Statistics</li>
+                <li>Mathematics: Functional Analysis, Linear Algebra, Probability Theory</li>
+            </ul>
+        </section>
+        
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>Matrix Exponential for ODEs</li>
+                <li>Numerical Integration in C++</li>
+                <li>Galois Theory and Field Extensions</li>
+                <li>Deep Learning Applications in Computer Vision</li>
+            </ul>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: example@domain.com</p>
+            <p>LinkedIn: linkedin.com/in/example</p>
+        </section>
+        
+        <button class="button" onclick="alert('Thank you for visiting!')">Click Me</button>
+    </div>
 </body>
 </html>
